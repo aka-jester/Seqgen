@@ -5,7 +5,7 @@
 .PHONY: clean finetune run call_substitutions
 
 clean:
-	python ./src/clean_fasta.py
+	python ./content/Seqgen/src/clean_fasta.py
 
 finetune:
 	python ./src/run_clm.py --model_name_or_path nferruz/ProtGPT2 \
@@ -21,11 +21,10 @@ finetune:
 
 
 run:
-	python ./src/run_finetuned_model.py ./model_out
-
+	python ./content/Seqgen/src/run_finetuned_model.py ./model_out
 call_substitutions:
-	python ./src/call_aa_variants.py
+	python ./content/Seqgen/src/call_aa_variants.py
 
 visualize:
-	Rscript ./src/manuscript_figures.R
-	Rscript ./src/supplementary_figures.R
+	Rscript ./content/Seqgen/src/manuscript_figures.R
+	Rscript ./content/Seqgen/src/supplementary_figures.R

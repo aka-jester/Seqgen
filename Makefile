@@ -16,7 +16,8 @@ finetune:
 					  --do_train \
 					  --do_eval \
 					  --output_dir model_out \
-					  --learning_rate 1e-05
+					  --learning_rate 1e-05	\
+					  --overwrite_output_dir\
 
 
 run:
